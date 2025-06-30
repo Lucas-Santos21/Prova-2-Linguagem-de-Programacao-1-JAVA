@@ -29,7 +29,7 @@ class Data{
 	
 	//entradas sem parametro
 	
-	public void entraAno(){
+	public void setAno(){
 		
 		int ano = -1;
 		
@@ -67,7 +67,7 @@ class Data{
 		
 	}
 
-	public void entraMes(){
+	public void setMes(){
 		
 		int mes = 0;
 		
@@ -120,7 +120,7 @@ class Data{
 		
 	}
 	
-	public void entraDia(){
+	public void setDia(){
 		
 		int dia = 0;
 		
@@ -135,7 +135,7 @@ class Data{
 				
 				switch(this.mes){
 					
-					case 1: {
+					case 1, 3, 5, 7, 8, 10, 12: {
 						
 						if(dia > 0 && dia < 32){
 							
@@ -201,27 +201,7 @@ class Data{
 						
 					}
 					
-					case 3: {
-						
-						if(dia > 0 && dia < 32){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 31)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 4: {
+					case 4, 6, 9, 11: {
 						
 						if(dia > 0 && dia < 31){
 							
@@ -232,166 +212,6 @@ class Data{
 							
 							System.out.println("------------------------------------------------");
 							System.out.println("Insira um valor de dia valido (entre 1 e 30)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 5: {
-						
-						if(dia > 0 && dia < 32){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 31)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 6: {
-						
-						if(dia > 0 && dia < 31){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 30)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 7: {
-						
-						if(dia > 0 && dia < 32){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 31)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 8: {
-						
-						if(dia > 0 && dia < 32){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 31)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 9: {
-						
-						if(dia > 0 && dia < 31){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 30)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 10: {
-						
-						if(dia > 0 && dia < 32){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 31)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 11: {
-						
-						if(dia > 0 && dia < 31){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 30)");
-							System.out.println("------------------------------------------------");
-							
-							dia = -1;
-							break;
-							
-						}
-						
-					}
-					
-					case 12: {
-						
-						if(dia > 0 && dia < 32){
-							
-							this.dia = dia;
-							break;
-							
-						} else{
-							
-							System.out.println("------------------------------------------------");
-							System.out.println("Insira um valor de dia valido (entre 1 e 31)");
 							System.out.println("------------------------------------------------");
 							
 							dia = -1;
@@ -421,19 +241,19 @@ class Data{
 	
 	//entradas com parametro
 	
-	public void entraDia(int d){
+	public void setDia(int d){
 		
 		this.dia = d;
 		
 	}
 	
-	public void entraMes(int m){
+	public void setMes(int m){
 		
 		this.mes = m;
 		
 	}
 	
-	public void entraAno(int a){
+	public void setAno(int a){
 		
 		this.ano = a;
 		
@@ -441,19 +261,19 @@ class Data{
 	
 	//saidas sem parametro
 	
-	public int retDia(){
+	public int getDia(){
 		
 		return this.dia;
 		
 	}
 	
-	public int retMes(){
+	public int getMes(){
 		
 		return this.mes;
 		
 	}
 	
-	public int retAno(){
+	public int getAno(){
 		
 		return this.ano;
 		
@@ -463,7 +283,7 @@ class Data{
 	
 	public boolean bissexto(){
 		
-		if((retAno() % 4 == 0 && retAno() % 100 != 0)|| (retAno() % 400 == 0)){
+		if((getAno() % 4 == 0 && getAno() % 100 != 0)|| (getAno() % 400 == 0)){
 			
 			return true;
 			
@@ -483,41 +303,41 @@ class Data{
 		
 		if(this.dia < 10){
 			
-			dia = "0" + retDia();
+			dia = "0" + getDia();
 			
 		} else{
 			
-			dia = "" + retDia();
+			dia = "" + getDia();
 			
 		}
 		
 		if(this.mes < 10){
 			
-			mes = "0" + retMes();
+			mes = "0" + getMes();
 			
 		} else{
 			
-			mes = "" + retMes();
+			mes = "" + getMes();
 			
 		}
 		
-		return dia + "/" + mes + "/" + retAno();
+		return dia + "/" + mes + "/" + getAno();
 		
 	}
 	
 	public String mostra2(){
 		
-		switch(retMes()){
+		switch(getMes()){
 			
 			case 1:{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Janeiro/" + retAno();
+					return getDia() + "/Janeiro/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Janeiro/" + retAno();
+					return getDia() + "/Janeiro/" + getAno();
 			
 				}
 				
@@ -527,11 +347,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Fevereiro/" + retAno();
+					return getDia() + "/Fevereiro/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Fevereiro/" + retAno();
+					return getDia() + "/Fevereiro/" + getAno();
 			
 				}
 				
@@ -541,11 +361,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Março/" + retAno();
+					return getDia() + "/Março/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Março/" + retAno();
+					return getDia() + "/Março/" + getAno();
 			
 				}
 				
@@ -555,11 +375,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Abril/" + retAno();
+					return getDia() + "/Abril/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Abril/" + retAno();
+					return getDia() + "/Abril/" + getAno();
 			
 				}
 				
@@ -569,11 +389,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Maio/" + retAno();
+					return getDia() + "/Maio/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Maio/" + retAno();
+					return getDia() + "/Maio/" + getAno();
 			
 				}
 				
@@ -583,11 +403,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Junho/" + retAno();
+					return getDia() + "/Junho/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Junho/" + retAno();
+					return getDia() + "/Junho/" + getAno();
 			
 				}
 				
@@ -597,11 +417,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Julho/" + retAno();
+					return getDia() + "/Julho/" + getAno();
 					
 				} else{
 					
-					return retDia() +  "/Julho/" + retAno();
+					return getDia() +  "/Julho/" + getAno();
 			
 				}
 				
@@ -611,11 +431,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Agosto/" + retAno();
+					return getDia() + "/Agosto/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Agosto/" + retAno();
+					return getDia() + "/Agosto/" + getAno();
 			
 				}
 				
@@ -625,11 +445,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Setembro/" + retAno();
+					return getDia() + "/Setembro/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Setembro/" + retAno();
+					return getDia() + "/Setembro/" + getAno();
 			
 				}
 				
@@ -639,11 +459,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Outubro/" + retAno();
+					return getDia() + "/Outubro/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Outubro/" + retAno();
+					return getDia() + "/Outubro/" + getAno();
 			
 				}
 				
@@ -653,11 +473,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Novembro/" + retAno();
+					return getDia() + "/Novembro/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Novembro/" + retAno();
+					return getDia() + "/Novembro/" + getAno();
 			
 				}
 				
@@ -667,11 +487,11 @@ class Data{
 				
 				if(this.dia < 10){
 			
-					return retDia() + "/Dezembro/" + retAno();
+					return getDia() + "/Dezembro/" + getAno();
 					
 				} else{
 					
-					return retDia() + "/Dezembro/" + retAno();
+					return getDia() + "/Dezembro/" + getAno();
 			
 				}
 				
@@ -679,7 +499,7 @@ class Data{
 			
 			default: {
             
-			return "Mês inválido: " + retMes();
+			return "Mês inválido: " + getMes();
 			
 			}
 			
@@ -699,13 +519,13 @@ class Data{
 		
 		int soma = 0;
 		
-		for(int i = 0; i < retMes() - 1; i++){
+		for(int i = 0; i < getMes() - 1; i++){
 			
 			soma += dias[i];
 			
 		}
 		
-		soma += retDia();
+		soma += getDia();
 		
 		return soma;
 		
