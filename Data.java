@@ -1,3 +1,7 @@
+import java.util.Scanner;
+import java.util.Date;
+import java.text.DateFormat;
+
 class Data{
 	
 	Scanner scan = new Scanner(System.in);
@@ -12,17 +16,17 @@ class Data{
 	
 	public Data(){
 		
-		entraAno();
-		entraMes();
-		entraDia();
+		setAno();
+		setMes();
+		setDia();
 		
 	}
 	
 	public Data(int a, int m, int d){
 
-		entraAno(a);
-		entraMes(m);
-		entraDia(d);
+		setAno(a);
+		setMes(m);
+		setDia(d);
 	}
 	
 	//validação ano bissexto
@@ -35,7 +39,7 @@ class Data{
 		
 		do{
 			System.out.println("------------------------------------------------");
-			System.out.println("Digite o ano: ");
+			System.out.print("Digite o ano: ");
 
 			 
 				if(scan.hasNextInt()){
@@ -49,7 +53,7 @@ class Data{
 					} else {
 						
 						System.out.println();
-						System.out.println("Digite um valor de ano valido(maior que zero)");
+						System.out.print("Digite um valor de ano valido(maior que zero)");
 						System.out.println();
 						
 					}
@@ -127,7 +131,7 @@ class Data{
 		do{
 			
 			System.out.println();
-			System.out.println("Digite o dia do mes: ");
+			System.out.print("Digite o dia do mes: ");
 			
 			if(scan.hasNextInt()){
 				

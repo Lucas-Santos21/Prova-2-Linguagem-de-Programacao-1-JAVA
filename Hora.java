@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Hora{
 	
 //atributoss
@@ -173,7 +175,39 @@ class Hora{
 		
 			public String getHora1(){
 				
-				return getHor() + ":" + getMin() + ":" + getSeg();
+				String hor, min, seg;
+		
+				if(this.hora < 10){
+					
+					hor = "0" + getHor();
+					
+				} else{
+					
+					hor = "" + getHor();
+					
+				}
+				
+				if(this.min < 10){
+					
+					min = "0" + getMin();
+					
+				} else{
+					
+					min = "" + getMin();
+					
+				}
+				
+				if(this.seg < 10){
+					
+					seg = "0" + getSeg();
+					
+				} else{
+					
+					seg = "" + getSeg();
+					
+				}
+				
+				return hor + ":" + min + ":" + seg;
 				
 			}
 			
